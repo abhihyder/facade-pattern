@@ -95,7 +95,7 @@ php artisan facade-pattern:interface ExampleInterface
 php artisan facade-pattern:service ExampleFacadeService
 
 ```
-
+Don't forget to register your facade service class in `FacadeServiceProvider` provider's register() method.   
 That's it! You can now start using the Facade Pattern in your Laravel application.   
 
 ## Contributing
