@@ -46,7 +46,7 @@ You have to manually add the service provider in your config/app.php file:
     App\Providers\FacadeServiceProvider::class,
 ];
 ```
-## Create Facade, Service and Interface
+## Create Scaffolding
 
 Now you can run the `facade-pattern:scaffold` command to generate the necessary scafolding files. You can do this by running the following command:
 ```bash
