@@ -1,0 +1,39 @@
+{
+    "name": "hyder/facade-pattern",
+    "description": "In this pattern, you would create Facade classes that provide a simplified, static interface to the underlying service implementations. The service classes would perform the actual business logic and communicate with the database or other external systems.",
+    "keywords": [
+        "facade-pattern",
+        "pattern",
+        "hyder",
+        "laravel"
+    ],
+    "authors": [
+        {
+            "name": "Tofayel Hyder Abhi",
+            "email": "tofayelhyder71@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "version": "1.0.0",
+    "license": "MIT",
+    "require": {
+        "php": "^7.3|^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hyder\\FacadePattern\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hyder\\FacadePattern\\FacadePatternServiceProvider"
+            ]
+        },
+        "files": [
+            "README.md"
+          ]
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
