@@ -27,7 +27,7 @@ class MakeScaffold extends Command
         $name = $this->getBaseName($this->pathAndName($name));
         $this->createFacade("{$name}Facade", $this->pathAndName("{$name}Facade"));
         $this->createInterface("{$name}Interface", $this->pathAndName("{$name}Interface"));
-        $this->createService("{$name}FacadeService", $this->pathAndName("{$name}FacadeService"));
+        $this->createService("{$name}FacadeService", $this->pathAndName("{$name}FacadeService"), $this->pathAndName("{$name}Interface")['name']);
         return true;
     }
 

@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\File;
 trait MakeServiceTrait
 {
 
-    protected function createService(string $name, array $arguments)
+    protected function createService(string $name, array $arguments, string $implement = "BaseInterface")
     {
 
         $serviceFilePath = app_path("Repositories/Services/{$name}.php");
@@ -21,6 +21,18 @@ trait MakeServiceTrait
                 $oldNamespace = "namespace App\Repositories\Services";
                 $newNamespace = "namespace App\Repositories\Services\\{$arguments['path']}";
                 $serviceContent = str_replace($oldNamespace, $newNamespace, $serviceContent);
+            }
+
+            if ($implement != "BaseInterface") {
+                $oldUse = "use App\Repositories\Interfaces\BaseInterface";
+
+                if (!empty(trim($arguments['path']))) {
+                    $newUse = "use App\Repositories\Interfaces\\{$arguments['path']}\\{$implement}";
+                } else {
+                    $newUse = "use App\Repositories\Interfaces\\{$implement}";
+                }
+
+                $serviceContent = str_replace([$oldUse, "BaseInterface"], [$newUse, $implement], $serviceContent);
             }
 
             File::put($serviceFilePath, $serviceContent);
