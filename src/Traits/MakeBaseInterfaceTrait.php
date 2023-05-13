@@ -9,7 +9,7 @@ trait MakeBaseInterfaceTrait
 
     protected function makeBaseInterface()
     {
-        $interfaceFilePath = app_path("Repositories/Interfaces/BaseInterface.php");
+        $interfaceFilePath = app_path("Patterns/Interfaces/BaseInterface.php");
         if (!file_exists($interfaceFilePath)) {
             $this->makeDirectory($interfaceFilePath);
             $interfaceContent = file_get_contents(__DIR__ . "/../Interfaces/BaseInterface.php");

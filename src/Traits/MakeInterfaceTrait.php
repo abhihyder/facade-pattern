@@ -9,16 +9,16 @@ trait MakeInterfaceTrait
 
     protected function createInterface(string $name, array $arguments)
     {
-        $interfaceFilePath = app_path("Repositories/Interfaces/{$name}.php");
+        $interfaceFilePath = app_path("Patterns/Interfaces/{$name}.php");
 
         if (!file_exists($interfaceFilePath)) {
             $this->makeDirectory($interfaceFilePath);
          
             if (!empty(trim($arguments['path']))) {
-                $namespace = "namespace App\Repositories\Interfaces\\{$arguments['path']};\n\nuse App\Repositories\Interfaces\BaseInterface;";
+                $namespace = "namespace App\Patterns\Interfaces\\{$arguments['path']};\n\nuse App\Patterns\Interfaces\BaseInterface;";
             } else {
 
-                $namespace = "namespace App\Repositories\Interfaces;";
+                $namespace = "namespace App\Patterns\Interfaces;";
             }
 
             // Create the interface file content

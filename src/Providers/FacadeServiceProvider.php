@@ -14,7 +14,7 @@ class FacadeServiceProvider extends ServiceProvider
     public function register()
     {
         // $this->app->bind('example-facade-service', function () {
-        //     return new \App\Repositories\Services\ExampleFacadeService();
+        //     return new \App\Patterns\Services\ExampleFacadeService();
         // });
 
         // Register more  facade services.

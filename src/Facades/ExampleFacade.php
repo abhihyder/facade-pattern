@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Repositories\Facades;
+namespace App\Patterns\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 class ExampleFacade extends Facade
 {
 
-    public static function getFacadeAccessor()
+    protected static function getFacadeAccessor()
     {
         return 'example-facade-service';
     }

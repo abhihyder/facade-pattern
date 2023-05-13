@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repositories\Services;
+namespace App\Patterns\Services;
 
-use App\Repositories\Interfaces\BaseInterface;
+use App\Patterns\Interfaces\BaseInterface;
 
 class ExampleService implements BaseInterface
 {

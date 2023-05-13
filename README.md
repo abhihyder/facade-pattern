@@ -57,7 +57,7 @@ This will create the following files in your app directory:
 
 ```text
 app/
-└── Repositories/
+└── Patterns/
     ├── Facades/
     │   ├── <name>Facade.php
     │   └── ... other facades
@@ -70,11 +70,11 @@ app/
 
 ```
 
-- The `Repositories/Facades` directory contains the Facade classes, which provide a simple, consistent interface to the underlying service classes. You can create additional Facade classes as needed.   
+- The `Patterns/Facades` directory contains the Facade classes, which provide a simple, consistent interface to the underlying service classes. You can create additional Facade classes as needed.   
 
-- The `Repositories/Interfaces` directory contains the repository interfaces, which define the methods that the service classes must implement. You can create additional interface files as needed.   
+- The `Patterns/Interfaces` directory contains the repository interfaces, which define the methods that the service classes must implement. You can create additional interface files as needed.   
 
-- The `Repositories/Services` directory contains the service classes, which perform the actual business logic and communicate with the database or other external systems. You can create additional service classes as needed.   
+- The `Patterns/Services` directory contains the service classes, which perform the actual business logic and communicate with the database or other external systems. You can create additional service classes as needed.   
 
 ## Create Facade, Interface and Service 
 

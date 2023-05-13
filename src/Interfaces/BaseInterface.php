@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories\Interfaces;
+namespace App\Patterns\Interfaces;
 
 interface BaseInterface
 {

@@ -10,7 +10,7 @@ trait MakeServiceTrait
     protected function createService(string $name, array $arguments, string $implement = "BaseInterface")
     {
 
-        $serviceFilePath = app_path("Repositories/Services/{$name}.php");
+        $serviceFilePath = app_path("Patterns/Services/{$name}.php");
 
         if (!file_exists($serviceFilePath)) {
             $this->makeDirectory($serviceFilePath);
@@ -18,18 +18,18 @@ trait MakeServiceTrait
             $serviceContent = str_replace("ExampleService", $arguments['name'], $serviceContent);
 
             if (!empty(trim($arguments['path']))) {
-                $oldNamespace = "namespace App\Repositories\Services";
-                $newNamespace = "namespace App\Repositories\Services\\{$arguments['path']}";
+                $oldNamespace = "namespace App\Patterns\Services";
+                $newNamespace = "namespace App\Patterns\Services\\{$arguments['path']}";
                 $serviceContent = str_replace($oldNamespace, $newNamespace, $serviceContent);
             }
 
             if ($implement != "BaseInterface") {
-                $oldUse = "use App\Repositories\Interfaces\BaseInterface";
+                $oldUse = "use App\Patterns\Interfaces\BaseInterface";
 
                 if (!empty(trim($arguments['path']))) {
-                    $newUse = "use App\Repositories\Interfaces\\{$arguments['path']}\\{$implement}";
+                    $newUse = "use App\Patterns\Interfaces\\{$arguments['path']}\\{$implement}";
                 } else {
-                    $newUse = "use App\Repositories\Interfaces\\{$implement}";
+                    $newUse = "use App\Patterns\Interfaces\\{$implement}";
                 }
 
                 $serviceContent = str_replace([$oldUse, "BaseInterface"], [$newUse, $implement], $serviceContent);

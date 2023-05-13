@@ -11,7 +11,7 @@ trait MakeFacadeTrait
     {
         $slug = strtolower(preg_replace('/(?<!^)[A-Z]/', '-$0', $arguments['name']));
 
-        $facadeFilePath = app_path("Repositories/Facades/{$name}.php");
+        $facadeFilePath = app_path("Patterns/Facades/{$name}.php");
 
         if (!file_exists($facadeFilePath)) {
             $this->makeDirectory($facadeFilePath);
@@ -20,8 +20,8 @@ trait MakeFacadeTrait
             $facadeContent = str_replace("example-facade", $slug, $facadeContent);
 
             if (!empty(trim($arguments['path']))) {
-                $oldNamespace = "namespace App\Repositories\Facades";
-                $newNamespace = "namespace App\Repositories\Facades\\{$arguments['path']}";
+                $oldNamespace = "namespace App\Patterns\Facades";
+                $newNamespace = "namespace App\Patterns\Facades\\{$arguments['path']}";
                 $facadeContent = str_replace($oldNamespace, $newNamespace, $facadeContent);
             }
 
