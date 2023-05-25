@@ -102,4 +102,4 @@ That's it! You can now start using the Facade Pattern in your Laravel applicatio
 If you would like to contribute to this package, please create a pull request or open an issue.
 
 ## License
-This package is open-sourced software licensed under the MIT license.
+This package is open-source software released under the [MIT license](https://opensource.org/licenses/MIT). Feel free to modify and use the package in your own projects.
