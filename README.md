@@ -21,7 +21,7 @@ Here comes the solution with Facade Pattern. You can easily access the Facade fr
 You can install the package via composer:
 
 ```bash
-composer require hyder/facade-pattern
+composer require hyder/facade-pattern --dev
 ```
 
 ## Publish Provider
